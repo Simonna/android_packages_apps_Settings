@@ -1,0 +1,329 @@
+# android_packages_apps_Settings
+res/drawable-hdpi/kangdroid_settings.png
+
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2014 Sweetpop
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Listview animation -->
+    <string-array name="listview_animation_entries">
+        <item>@string/listview_off</item>
+        <item>@string/listview_wave_left</item>
+        <item>@string/listview_wave_right</item>
+        <item>@string/listview_scale</item>
+        <item>@string/listview_alpha</item>
+        <item>@string/listview_stack_top</item>
+        <item>@string/listview_stack_bottom</item>
+        <item>@string/listview_unfold</item>
+        <item>@string/listview_fold</item>
+        <item>@string/listview_translate_left</item>
+        <item>@string/listview_translate_right</item>
+    </string-array>
+
+    <string-array name="listview_animation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <!-- Listview Interpolator -->
+    <string-array name="listview_interpolator_entries">
+        <item>@string/listview_off</item>
+        <item>@string/listview_accelerate_interpolator</item>
+        <item>@string/listview_decelerate_interpolator</item>
+        <item>@string/listview_accelerate_decelerate_interpolator</item>
+        <item>@string/listview_anticipate_interpolator</item>
+        <item>@string/listview_overshoot_interpolator</item>
+        <item>@string/listview_anticipate_overshoot_interpolator</item>
+        <item>@string/listview_bounce_interpolator</item>
+    </string-array>
+
+    <string-array name="listview_interpolator_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+     </string-array>
+</resources>
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++     Copyright (C) 2012-2014 Sweetpop
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
++<string name="anim_settings_title">Animation Settings</string>
++    
++    <!-- ListView animation -->
++    <string name="listview_category">ListView Animation</string>
++    <string name="listview_animation_title">ListView Animation</string>
++    <string name="listview_off">Off</string>
++    <string name="listview_wave_left">Wave (Left)</string>
++    <string name="listview_wave_right">Wave (Right)</string>
++    <string name="listview_alpha">Alpha</string>
++    <string name="listview_scale">Scale</string>
++    <string name="listview_stack_top">Stack (Top)</string>
++    <string name="listview_stack_bottom">Stack (Bottom)</string>
++    <string name="listview_unfold">Unfold</string>
++    <string name="listview_fold">Fold</string>
++    <string name="listview_translate_left">Translate (Left)</string>
++    <string name="listview_translate_right">Translate (Right)</string>
++
++    <!-- ListView interpolator -->
++    <string name="listview_interpolator_title">ListView Interpolator</string>
++    <string name="listview_accelerate_interpolator">accelerate_interpolator</string>
++    <string name="listview_decelerate_interpolator">decelerate_interpolator</string>
++    <string name="listview_accelerate_decelerate_interpolator">accelerate_decelerate_interpolator</string>
++    <string name="listview_anticipate_interpolator">anticipate_interpolator</string>
++    <string name="listview_overshoot_interpolator">overshoot_interpolator</string>
++    <string name="listview_anticipate_overshoot_interpolator">anticipate_overshoot_interpolator</string>
++    <string name="listview_bounce_interpolator">bounce_interpolator</string>
++
++    <!-- Seetpop Settings -->
++    <string name="seetpop_settings">Customization</string>
++
++</resources>
+<!-- Sweetpop Advanced Settings -->
++    <dashboard-tile
++        android:id="@+id/kangdroid_settings"
++        android:title="@string/kangdroid_settings"
++        android:fragment="com.android.settings.cyanogenmod.sweetpopSettings"
++        android:icon="@drawable/kangdroid_settings" />
+ 
+ 
+     </dashboard-category>
+     +<?xml version="1.0" encoding="utf-8"?>
++<!-- Copyright (C) 2014 Android Open KangDroid Project
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++
++<PreferenceScreen
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:title="@string/dokdo_settings_title"
++    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
++
++    <PreferenceCategory
++        android:key="status_bar_category"
++        android:title="@string/status_bar_title" >
++
++     <PreferenceScreen
++                android:key="listview"
++                android:fragment="com.android.settings.cyanogenmod.Listview"
++                android:title="@string/listview_category" />
++
++    <!-- Status Bar -->
++    <PreferenceScreen
++        android:key="status_bar_settings"
++        android:fragment="com.android.settings.cyanogenmod.StatusBar"
++        android:title="@string/status_bar_title" />
++
++    </PreferenceCategory>
++</PreferenceScreen>
++<?xml version="1.0" encoding="utf-8"?>
++<!-- Copyright (C) 2013 The CyanogenMod Project
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++
++<PreferenceScreen
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:title="@string/listview_category"
++    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
++    <PreferenceCategory
++        android:key="listview_category"
++        android:title="@string/listview_category" >
++
++    <ListPreference
++        android:key="listview_animation"
++        android:dialogTitle="@string/listview_animation_title"
++        android:title="@string/listview_animation_title"
++        android:entries="@array/listview_animation_entries"
++        android:entryValues="@array/listview_animation_values"
++        android:defaultValue="0" />
++
++    <ListPreference
++        android:key="listview_interpolator"
++        android:dialogTitle="@string/listview_interpolator_title"
++        android:title="@string/listview_interpolator_title"
++        android:entries="@array/listview_interpolator_entries"
++        android:entryValues="@array/listview_interpolator_values"
++        android:defaultValue="0" />
++
++    </PreferenceCategory>
++</PreferenceScreen>
++/*
++ * Copyright (C) 2014 Sweetpop
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++package com.android.settings.cyanogenmod;
++
++import android.os.Bundle;
++import android.os.UserHandle;
++import android.preference.ListPreference;
++import android.preference.Preference;
++import android.preference.PreferenceScreen;
++import android.provider.Settings;
++
++import com.android.settings.R;
++import com.android.settings.SettingsPreferenceFragment;
++
++public class SweetpopdSettings extends SettingsPreferenceFragment{
++
++    @Override
++    public void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        addPreferencesFromResource(R.xml.sweetpop_settings);
++    }
++}
++/*
++ * Copyright (C) 2013 The CyanogenMod Project
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++package com.android.settings.cyanogenmod;
++
++import android.app.ActivityManager;
++import android.content.res.Resources;
++import android.os.Bundle;
++import android.os.RemoteException;
++import android.os.ServiceManager;
++import android.preference.ListPreference;
++import android.preference.Preference;
++import android.preference.PreferenceScreen;
++import android.preference.Preference.OnPreferenceClickListener;
++import android.provider.Settings;
++import android.provider.Settings.SettingNotFoundException;
++
++import com.android.settings.R;
++import com.android.settings.SettingsPreferenceFragment;
++import com.android.settings.Utils;
++
++public class Listview extends SettingsPreferenceFragment
++        implements Preference.OnPreferenceChangeListener {
++
++    private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
++    private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
++
++    private ListPreference mListViewAnimation;
++    private ListPreference mListViewInterpolator;
++
++    @Override
++    public void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++
++        addPreferencesFromResource(R.xml.listview_settings);
++
++        //ListView Animations
++        mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
++        int listviewanimation = Settings.System.getInt(getActivity().getContentResolver(),
++            Settings.System.LISTVIEW_ANIMATION, 0);
++        mListViewAnimation.setValue(String.valueOf(listviewanimation));
++        mListViewAnimation.setSummary(mListViewAnimation.getEntry());
++        mListViewAnimation.setOnPreferenceChangeListener(this);
++
++        mListViewInterpolator = (ListPreference) findPreference(KEY_LISTVIEW_INTERPOLATOR);
++        int listviewinterpolator = Settings.System.getInt(getActivity().getContentResolver(),
++            Settings.System.LISTVIEW_INTERPOLATOR, 0);
++        mListViewInterpolator.setValue(String.valueOf(listviewinterpolator));
++        mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
++        mListViewInterpolator.setOnPreferenceChangeListener(this);
++    }
++
++    public boolean onPreferenceChange(Preference preference, Object objValue) {
++        if (preference == mListViewAnimation) {
++            int listviewanimation = Integer.valueOf((String) objValue);
++            int index = mListViewAnimation.findIndexOfValue((String) objValue);
++            Settings.System.putInt(getActivity().getContentResolver(),
++                    Settings.System.LISTVIEW_ANIMATION,
++                    listviewanimation);
++            mListViewAnimation.setSummary(mListViewAnimation.getEntries()[index]);
++            return true;
++        } else if (preference == mListViewInterpolator) {
++            int listviewinterpolator = Integer.valueOf((String) objValue);
++            int index = mListViewInterpolator.findIndexOfValue((String) objValue);
++            Settings.System.putInt(getActivity().getContentResolver(),
++                    Settings.System.LISTVIEW_INTERPOLATOR,
++                    listviewinterpolator);
++            mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
++            return true;
++        }
++        return false;
++    }
++}
+
